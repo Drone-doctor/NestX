@@ -1263,10 +1263,6 @@ function renderDatasheetPage() {
         <p>© 2026 NestX Aerospace Pvt. Ltd. All rights reserved. | info@nestx.co.in | +91 9353671254</p>
       </footer>
 
-      <!-- Actions Bar (Close Window) -->
-      <div class="ds-actions no-print">
-        <button onclick="window.close()" class="btn btn-secondary"><i class="fa-solid fa-xmark"></i> Close Window</button>
-      </div>
     </div>
   `;
 }
