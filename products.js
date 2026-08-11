@@ -68,7 +68,7 @@ const categoryInfo = {
     products: [
       {
         id: 'gnss-denied-1',
-        name: 'NX-VOIS GNSS-Denied System',
+        name: 'NX-VIOS GNSS-Denied System',
         badge: 'NON-GPS AUTONOMOUS POSITIONING',
         desc: 'Autonomous visual-inertial odometry (VIO) and 3D LiDAR navigation payload enabling precision hovering and position hold in GPS/GNSS-denied environments, urban canyons, underground tunnels, and electronic warfare jammer zones.',
         image: 'assets/images/vois_system.png?v=20260810_v1',

@@ -442,21 +442,6 @@ function setupEventListeners() {
     closeProdModal.addEventListener('click', () => closeModal('product-modal-overlay'));
   }
 
-  // Specification Enquiry Form Submission
-  const enquiryForm = document.getElementById('enquiry-form');
-  if (enquiryForm) {
-    enquiryForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nameEl = document.getElementById('enq-name');
-      const prodEl = document.getElementById('enq-product');
-      const name = nameEl ? nameEl.value : 'Valued Client';
-      const product = prodEl ? prodEl.value : 'UAV Hardware';
-      
-      showToast(`Inquiry received for ${product}! Our engineering team will contact ${name} within 24 hours.`);
-      enquiryForm.reset();
-    });
-  }
-
   // Newsletter form
   const newsForm = document.getElementById('newsletter-form');
   if (newsForm) {
@@ -469,11 +454,26 @@ function setupEventListeners() {
 }
 
 /* -------------------------------------------------------------------
-   Page View Router (Home, Products, DaaS, Contact Views)
+   Page View Router (Home, Products, Solutions, Contact Views)
    ------------------------------------------------------------------- */
 function switchView(targetViewId) {
-  const validViews = ['home', 'products', 'daas', 'contact'];
+  const validViews = ['home', 'products', 'solutions', 'contact'];
   const viewId = validViews.includes(targetViewId) ? targetViewId : 'home';
+
+  if (viewId === 'contact') {
+    ['home', 'contact'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.add('active-view');
+        el.classList.remove('hidden-view');
+      }
+    });
+    const contactSec = document.getElementById('contact');
+    if (contactSec) {
+      contactSec.scrollIntoView({ behavior: 'smooth' });
+    }
+    return;
+  }
 
   validViews.forEach(v => {
     const el = document.getElementById(v);
@@ -596,11 +596,16 @@ document.addEventListener('DOMContentLoaded', () => {
     enquiryForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = enquiryForm.querySelector('button[type="submit"]');
-      const originalText = btn.innerHTML;
-      btn.disabled = true;
-      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sending Inquiry...`;
+      const originalText = btn ? btn.innerHTML : 'Submit Inquiry';
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Sending Inquiry...`;
+      }
 
+      // Extract FormData BEFORE resetting form
       const formData = new FormData(enquiryForm);
+      const name = formData.get('Full_Name') || 'Valued Client';
+
       try {
         const response = await fetch('https://formsubmit.co/ajax/guptashivambdn@gmail.com', {
           method: 'POST',
@@ -608,19 +613,21 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: { 'Accept': 'application/json' }
         });
 
-        if (response.ok) {
-          showToast('Inquiry Sent! Email routed to guptashivambdn@gmail.com');
+        const data = await response.json();
+        if (response.ok || data.success === 'true') {
+          showToast(`Inquiry Received! Detailed email routed to guptashivambdn@gmail.com.`);
           enquiryForm.reset();
         } else {
-          // Fallback to standard form submission if AJAX blocked
           enquiryForm.submit();
         }
       } catch (err) {
         console.log('AJAX submit fallback triggered', err);
         enquiryForm.submit();
       } finally {
-        btn.disabled = false;
-        btn.innerHTML = originalText;
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+        }
       }
     });
   }

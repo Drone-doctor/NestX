@@ -2113,3 +2113,53 @@ header.navbar .dropdown-menu a.dropdown-item.highlight-item {
 header.navbar .dropdown-menu a.dropdown-item.highlight-item i {
   color: #ffb703 !important;
 }
+
+/* -------------------------------------------------------------------
+   WhatsApp Direct Enquiry Button & Floating Widget
+   ------------------------------------------------------------------- */
+.whatsapp-float-btn {
+  position: fixed !important;
+  bottom: 26px !important;
+  right: 26px !important;
+  background: #25d366 !important;
+  color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 22px !important;
+  border-radius: 50px !important;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45), 0 0 20px rgba(0, 0, 0, 0.6) !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  text-decoration: none !important;
+  z-index: 999999 !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.whatsapp-float-btn i {
+  font-size: 1.55rem !important;
+  color: #ffffff !important;
+}
+
+.whatsapp-float-btn:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.65), 0 0 30px rgba(37, 211, 102, 0.5) !important;
+  background: #20ba5a !important;
+  color: #ffffff !important;
+}
+
+.btn-whatsapp {
+  background: #25d366 !important;
+  color: #ffffff !important;
+  border: 1px solid #25d366 !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a !important;
+  border-color: #20ba5a !important;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4) !important;
+  transform: translateY(-2px) !important;
+}

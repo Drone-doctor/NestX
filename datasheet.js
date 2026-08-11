@@ -3,14 +3,14 @@
 const DATASHEETS = {
   'gnss-denied-1': {
     code: 'NX03-03',
-    title: 'NX-VOIS GNSS-Denied System',
+    title: 'NX-VIOS GNSS-Denied System',
     subtitle: 'Visual-Inertial Odometry System (VIO + 3D LiDAR Non-GPS Autonomous Positioning)',
     highlights: 'VIO + 3D LiDAR | < 0.5% Sub-Meter Position Hold | 360° Obstacle Avoidance | DroneCAN / ROS2 | Made in India',
     images: {
       bottom: 'assets/images/vois_system.png?v=20260810_v1',
       top: 'assets/images/vois_system.png?v=20260810_v1'
     },
-    description: 'NX-VIoS (Visual-Inertial Odometry System) is an autonomous non-GPS positioning and navigation payload engineered for UAV operations in GPS/GNSS-denied environments. Integrating dual stereo optical vision sensors, high-accuracy 3D LiDAR scanner, and an IMU measurement unit, NX-VOIS delivers sub-meter position hold (< 0.5% distance drift rate), 360-degree real-time 3D point-cloud obstacle mapping, and precise navigation in electronic warfare jamming zones, urban canyons, underground tunnels, and indoor facilities.',
+    description: 'NX-VIOS (Visual-Inertial Odometry System) is an autonomous non-GPS positioning and navigation payload engineered for UAV operations in GPS/GNSS-denied environments. Integrating dual stereo optical vision sensors, high-accuracy 3D LiDAR scanner, and an IMU measurement unit, NX-VIOS delivers sub-meter position hold (< 0.5% distance drift rate), 360-degree real-time 3D point-cloud obstacle mapping, and precise navigation in electronic warfare jamming zones, urban canyons, underground tunnels, and indoor facilities.',
     keyFeatureShowcase: [
       {
         title: 'NON-GPS AUTONOMOUS POSITIONING',
