@@ -158,8 +158,11 @@ function setCategory(cat) {
           </div>
 
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="datasheet.html?id=${prod.id}" target="_blank" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-              <i class="fa-solid fa-file-pdf"></i> More Details (Datasheet)
+            <a href="datasheet.html?id=${prod.id}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+              <i class="fa-solid fa-eye"></i> View Datasheet
+            </a>
+            <a href="datasheet.html?id=${prod.id}&download=true" target="_blank" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; font-weight: 700;">
+              <i class="fa-solid fa-file-pdf"></i> Download PDF Datasheet
             </a>
           </div>
         </div>

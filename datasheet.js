@@ -1199,7 +1199,12 @@ function renderDatasheetPage() {
         <div class="ds-header-brand">
           <img src="assets/images/nestx_logo.png" alt="NestX Logo" class="ds-logo" />
         </div>
-        <div class="ds-header-code">${data.code} | DATASHEET</div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button onclick="window.print()" class="btn btn-primary btn-sm no-print" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; border: none; border-radius: 8px; padding: 8px 18px; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 243, 255, 0.35);">
+            <i class="fa-solid fa-file-pdf"></i> Download PDF Datasheet
+          </button>
+          <div class="ds-header-code">${data.code} | DATASHEET</div>
+        </div>
       </header>
 
       <!-- Main Title Block -->
@@ -1263,8 +1268,21 @@ function renderDatasheetPage() {
         <p>© 2026 NestX Aerospace Pvt. Ltd. All rights reserved. | info@nestx.co.in | +91 9353671254</p>
       </footer>
 
+      <!-- Bottom Actions Bar (Download PDF) -->
+      <div class="ds-actions no-print" style="margin-top: 2rem; text-align: center;">
+        <button onclick="window.print()" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 10px; font-weight: 700; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; border: none; border-radius: 8px; padding: 12px 28px; cursor: pointer; box-shadow: 0 6px 20px rgba(0, 243, 255, 0.4);">
+          <i class="fa-solid fa-file-pdf"></i> Download Standard PDF Datasheet
+        </button>
+      </div>
+
     </div>
   `;
+
+  if (window.location.search.includes('download=true')) {
+    setTimeout(() => {
+      window.print();
+    }, 600);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', renderDatasheetPage);
