@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="NestX Aerospace - Full-Stack Drone Solutions, Precision Avionics, Micro UAV Platforms & AI Mission Control. Headquartered in Bengaluru, Karnataka, India.">
+  <title>NestX Aerospace | Full-Stack Drone & Avionics Technology</title>
+  <!-- Google Fonts: Outfit & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=20260808_v17">
+</head>
+
+<body>
+  <!-- Animated Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Corporate Header / Asteria-Inspired Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <img src="assets/images/nestx_logo.png" alt="NestX Aerospace Logo" class="header-logo-img">
+      </a>
+
+      <!-- Corporate Nav Menu -->
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        
+        <!-- Product Dropdown -->
+        <div class="nav-item dropdown">
+          <a href="products.html" class="nav-link dropdown-toggle">Product <i class="fa-solid fa-caret-down nav-arrow"></i></a>
+          <div class="dropdown-menu glass-dropdown">
+            <a href="datasheet.html?id=signature-1" class="dropdown-item"><i class="fa-solid fa-drone"></i> SIGNATURE-I (Micro UAV)</a>
+            <a href="datasheet.html?id=command-1" class="dropdown-item"><i class="fa-solid fa-gamepad"></i> Command 1 Joystick</a>
+            <a href="datasheet.html?id=pocket-pro" class="dropdown-item"><i class="fa-solid fa-walkie-talkie"></i> Handheld Ground Controller</a>
+            <a href="datasheet.html?id=gnss-denied-1" class="dropdown-item"><i class="fa-solid fa-eye"></i> NX-VOIS GNSS-Denied System</a>
+            <a href="datasheet.html?id=atlas-1" class="dropdown-item"><i class="fa-solid fa-compass"></i> NX-Atlas 1 GNSS + Compass</a>
+            <a href="datasheet.html?id=joule-1" class="dropdown-item"><i class="fa-solid fa-bolt"></i> NX-Joule 1 Buck Converter</a>
+            <div class="dropdown-divider"></div>
+            <a href="products.html" class="dropdown-item highlight-item"><i class="fa-solid fa-grid-2"></i> View Full Product Catalog →</a>
+          </div>
+        </div>
+
+        <!-- Solution Dropdown -->
+        <div class="nav-item dropdown">
+          <a href="#solutions" class="nav-link dropdown-toggle">Solution <i class="fa-solid fa-caret-down nav-arrow"></i></a>
+          <div class="dropdown-menu glass-dropdown">
+            <a href="#solutions" class="dropdown-item"><i class="fa-solid fa-laser"></i> Lidar Solution</a>
+            <a href="#solutions" class="dropdown-item"><i class="fa-solid fa-house-signal"></i> In-Door Positioning System</a>
+            <a href="datasheet.html?id=gnss-denied-1" class="dropdown-item"><i class="fa-solid fa-satellite-slash"></i> GNSS Denied System</a>
+            <a href="datasheet.html?id=command-1" class="dropdown-item"><i class="fa-solid fa-gamepad"></i> Customised Remote Controller</a>
+            <a href="#solutions" class="dropdown-item"><i class="fa-solid fa-cubes"></i> 3D Mapping</a>
+            <a href="#solutions" class="dropdown-item"><i class="fa-solid fa-wheat-awn"></i> Agri Crop Inspection</a>
+            <a href="#solutions" class="dropdown-item"><i class="fa-solid fa-graduation-cap"></i> Remote Pilot Certificate Training</a>
+          </div>
+        </div>
+
+        <a href="#contact" class="nav-link highlight">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- COMBINED HOME MASTER SECTION (Hero + About Us + Key Features + Industries) -->
+    <div id="home" class="home-master-wrapper page-view">
+      <!-- HERO BANNER -->
+      <section class="asteria-hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <div class="hero-kicker"><i class="fa-solid fa-microchip"></i> FULL-STACK DRONE TECHNOLOGY & AVIONICS</div>
+            <h1 class="hero-heading">End-to-End Drone Solutions & Aerial Intelligence</h1>
+            <p class="hero-subtext">
+              NestX Aerospace delivers indigenous micro-category UAV platforms, high-reliability power avionics,
+              dual-band
+              GNSS positioning, and AI mission control software for defense, industrial inspections, and geographic
+              surveying.
+            </p>
+
+
+
+            <!-- HERO IMAGE SLIDESHOW CAROUSEL (Full Images Only - Clean Presentation) -->
+            <div class="slideshow-wrapper">
+              <!-- Slides Window (User Saved Slideshow Images) -->
+              <div class="slideshow-stage">
+                <!-- Slide 1 -->
+                <div class="hero-slide active">
+                  <div class="full-slide-img-wrap">
+                    <img src="assets/Slide show Image/slide_01_1920x1080_full_content.jpg"
+                      alt="NestX Aerospace Drone Showcase 1">
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide">
+                  <div class="full-slide-img-wrap">
+                    <img src="assets/Slide show Image/slide_02_1920x1080_full_content.jpg"
+                      alt="NestX Aerospace Drone Showcase 2">
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide">
+                  <div class="full-slide-img-wrap">
+                    <img src="assets/Slide show Image/slide_05_1920x1080_full_content.jpg"
+                      alt="NestX Aerospace Drone Showcase 3">
+                  </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="hero-slide">
+                  <div class="full-slide-img-wrap">
+                    <img src="assets/Slide show Image/slide_06_1920x1080_full_content.jpg"
+                      alt="NestX Aerospace Drone Showcase 4">
+                  </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="hero-slide">
+                  <div class="full-slide-img-wrap">
+                    <img src="assets/Slide show Image/slide_07_1920x1080_full_content.jpg"
+                      alt="NestX Aerospace Drone Showcase 5">
+                  </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="hero-slide">
+                  <div class="full-slide-img-wrap">
+                    <img src="assets/Slide show Image/slide_08_1920x1080_full_content.jpg"
+                      alt="NestX Aerospace Drone Showcase 6">
+                  </div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="hero-slide">
+                  <div class="full-slide-img-wrap">
+                    <img src="assets/Slide show Image/slide_09_1920x1080_full_content.jpg"
+                      alt="NestX Aerospace Drone Showcase 7">
+                  </div>
+                </div>
+
+                <!-- Arrow Navigation -->
+                <button class="slide-arrow prev-arrow" onclick="prevSlide()"><i
+                    class="fa-solid fa-chevron-left"></i></button>
+                <button class="slide-arrow next-arrow" onclick="nextSlide()"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ABOUT NESTX AEROSPACE & COMPANY OVERVIEW -->
+    <section class="asteria-section about-bg" id="about">
+      <div class="container">
+        <div class="company-overview-grid">
+          <!-- Left Column: Company Info -->
+          <div class="company-info-col">
+            <h2 class="company-brand-title">NESTX AEROSPACE</h2>
+            <p class="company-desc-text">
+              NestX Aerospace is a premier innovator in unmanned aerial vehicle (UAV) control systems and flight
+              avionics. With a heritage rooted in precision engineering and a vision set on the future of autonomous
+              flight, we design and manufacture high-reliability UAV platforms, control hardware, and avionics.
+            </p>
+            <p class="company-desc-text">
+              Our mission is to empower pilots and operators with tools that feel like an extension of themselves,
+              ensuring mission success in the most demanding environments.
+            </p>
+          </div>
+
+          <!-- Right Column: Stats Grid (2 top cards + 1 full-width bottom card) -->
+          <div class="company-stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">10+</div>
+              <div class="stat-label">YEARS INNOVATION</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">20+</div>
+              <div class="stat-label">PRODUCT PROTOTYPES</div>
+            </div>
+            <div class="stat-card stat-card-wide">
+              <div class="stat-value">100%</div>
+              <div class="stat-label">MISSION RELIABILITY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY FEATURES SECTION -->
+    <section class="asteria-section key-features-bg" id="key-features">
+      <div class="container">
+        <div class="section-title-wrap center-title">
+          <h2 class="key-features-heading">KEY FEATURES</h2>
+          <p class="key-features-sub">Built to withstand the rigorous demands of aerospace environments.</p>
+        </div>
+
+        <div class="key-features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3 class="feature-title">DESIGN AND MANUFACTURING IN INDIA</h3>
+            <p class="feature-desc">Proudly engineered and produced locally, ensuring high-quality standards and rapid
+              support.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-helicopter"></i></div>
+            <h3 class="feature-title">ROBUST & SMART DRONE TECHNOLOGY</h3>
+            <p class="feature-desc">Advanced flight algorithms and durable hardware designed for intelligent and
+              reliable operations.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <h3 class="feature-title">CUSTOMISATION & MODULAR SOLUTION</h3>
+            <p class="feature-desc">Tailored solutions with modular components to meet specific mission requirements
+              and payload needs.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3 class="feature-title">COMPLIANCE, CERTIFICATION & RELIABILITY</h3>
+            <p class="feature-desc">Fully certified systems meeting rigorous aerospace standards for safety and
+              operational reliability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES WE SERVE -->
+    <section class="asteria-section industries-bg" id="industries">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="sub-kicker"><i class="fa-solid fa-network-wired"></i> ENTERPRISE APPLICATIONS</span>
+          <h2 class="main-title">Industries We Serve</h2>
+          <p class="section-lead">Providing actionable aerial intelligence and tailored UAV hardware across critical
+            national and enterprise infrastructure.</p>
+        </div>
+
+        <div class="industries-grid">
+          <div class="ind-card">
+            <div class="ind-icon"><i class="fa-solid fa-shield-cat"></i></div>
+            <h4>Defence & Homeland Security</h4>
+            <p>Border surveillance, perimeter monitoring, tactical reconnaissance, and target tracking.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-icon"><i class="fa-solid fa-industry"></i></div>
+            <h4>Oil, Gas & Energy</h4>
+            <p>Pipeline inspection, flare stack monitoring, solar farm thermography, and high-voltage line survey.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h4>GIS Surveying & Mapping</h4>
+            <p>High-resolution aerial photogrammetry, land record mapping, urban planning, and 3D modeling.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+            <h4>Mining & Heavy Industry</h4>
+            <p>Stockpile volumetric estimation, pit surveying, slope stability, and site security oversight.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+            <h4>Precision Agriculture</h4>
+            <p>Crop health monitoring, multispectral vegetation index mapping, and soil condition analytics.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-icon"><i class="fa-solid fa-building-user"></i></div>
+            <h4>Infrastructure & Construction</h4>
+            <p>Highway construction progress monitoring, bridge asset inspection, and structural integrity audits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL-STACK DRONE ECOSYSTEM -->
+    <section class="asteria-section ecosystem-bg" id="ecosystem">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="sub-kicker"><i class="fa-solid fa-layer-group"></i> INTEGRATED ECOSYSTEM</span>
+          <h2 class="main-title">Full-Stack UAV Technology Architecture</h2>
+          <p class="section-lead">Combining indigenous UAV hardware, precision component avionics, and intelligent
+            mission control software into a seamless operational workflow.</p>
+        </div>
+
+        <div class="eco-grid">
+          <div class="eco-card">
+            <div class="eco-badge">HARDWARE PLATFORMS</div>
+            <div class="eco-img-box">
+              <img src="assets/images/signature_1_drone.png" alt="NestX UAV Platforms" class="eco-img">
+            </div>
+            <h3>Micro UAV Platforms</h3>
+            <p>Under 1kg micro surveillance & inspection drones built for single-person rapid deployment,
+              45-minute
+              flight endurance, and 10 km control range.</p>
+          </div>
+
+          <div class="eco-card">
+            <div class="eco-badge">PRECISION AVIONICS</div>
+            <div class="eco-img-box">
+              <img src="assets/images/buck_converter.png" alt="NestX Avionics Components" class="eco-img">
+            </div>
+            <h3>Avionics & Components</h3>
+            <p>High-efficiency step-down UBEC buck converters, EMI-shielded M9N GNSS GPS modules, IST8310 3-axis
+              magnetometers, and CNC hall-effect joysticks.</p>
+          </div>
+
+          <div class="eco-card">
+            <div class="eco-badge">AI MISSION CONTROL</div>
+            <div class="eco-img-box">
+              <img src="assets/images/nestlink_logo.png?v=20260809_v2" alt="NestLink AI Software" class="eco-img">
+            </div>
+            <h3>NestLink AI Software</h3>
+            <p>Autonomous mission planning, real-time AI target tracking (human/vehicle/boat), automated
+              return-to-home
+              failsafes, and cloud telemetry analytics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- PRODUCT CATALOG (IPET System Layout) -->
+    <section class="asteria-section products-bg page-view" id="products">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2 class="main-title">Product Catalog</h2>
+        </div>
+
+        <div class="ipet-catalog-layout">
+          <!-- Left Vertical Sidebar Navigation -->
+          <aside class="ipet-sidebar">
+            <ul class="ipet-cat-menu">
+              <li class="ipet-cat-item active" data-category="all">
+                <span>ALL PRODUCTS</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </li>
+              <li class="ipet-cat-item" data-category="uas">
+                <span>UAS (DRONES)</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </li>
+              <li class="ipet-cat-item" data-category="radio-controllers">
+                <span>RADIO CONTROLLERS</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </li>
+              <li class="ipet-cat-item" data-category="accessories">
+                <span>ACCESSORIES</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Right Content Area -->
+          <div class="ipet-content-area">
+            <div class="ipet-category-header">
+              <h3 class="ipet-current-cat-title" id="current-category-title">ALL PRODUCTS</h3>
+              <span id="product-count-text" class="ipet-count-tag">5 items available</span>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="ipet-product-grid" id="product-grid-container">
+              <!-- Injected by app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DRONE-AS-A-SERVICE -->
+    <section class="asteria-section daas-bg page-view" id="daas">
+      <div class="container">
+        <div class="daas-card">
+          <div class="daas-text">
+            <span class="sub-kicker"><i class="fa-solid fa-handshake"></i> ENTERPRISE SERVICES</span>
+            <h2>Drone-as-a-Service (DaaS) & Custom R&D</h2>
+            <p>Need customized drone operations or tailored avionics integration? NestX Aerospace offers complete
+              turnkey Drone-as-a-Service solutions, pilot training, bespoke payload design, and technical
+              engineering
+              consultancy for government and enterprise missions.</p>
+            <div class="daas-features">
+              <span><i class="fa-solid fa-check text-cyan"></i> Turnkey Aerial Mapping & Inspection Services</span>
+              <span><i class="fa-solid fa-check text-cyan"></i> Custom Hardware & Avionics Integration</span>
+              <span><i class="fa-solid fa-check text-cyan"></i> Onboard AI & Computer Vision Model
+                Customization</span>
+            </div>
+          </div>
+          <div class="daas-action">
+            <button onclick="openConnectModal()" class="btn btn-primary btn-lg"><i
+                class="fa-solid fa-calendar-check"></i> Request DaaS Consultation</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT US -->
+    <section class="asteria-section contact-bg page-view" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-header">
+            <span class="sub-kicker"><i class="fa-solid fa-paper-plane"></i> GET IN TOUCH</span>
+            <h2>Connect With NestX Aerospace</h2>
+            <p>Discuss your aerial inspection, custom avionics, or defense drone requirements with our engineering
+              team.
+            </p>
+          </div>
+
+          <form id="enquiry-form" class="enquiry-form" action="https://formsubmit.co/guptashivambdn@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New NestX Aerospace Customer Inquiry">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="enq-name">Full Name *</label>
+                <input type="text" id="enq-name" name="Full_Name" required placeholder="Enter your full name">
+              </div>
+
+              <div class="form-group">
+                <label for="enq-org">Organization / Enterprise *</label>
+                <input type="text" id="enq-org" name="Organization" required placeholder="Enter organization name">
+              </div>
+
+              <div class="form-group">
+                <label for="enq-email">Business Email *</label>
+                <input type="email" id="enq-email" name="Email" required placeholder="Enter email address">
+              </div>
+
+              <div class="form-group">
+                <label for="enq-phone">Contact Phone / WhatsApp *</label>
+                <input type="tel" id="enq-phone" name="Phone" required placeholder="Enter contact phone">
+              </div>
+
+              <div class="form-group full-width">
+                <label for="enq-message">Specific Mission / Project Requirements *</label>
+                <textarea id="enq-message" name="Requirements" rows="4" required
+                  placeholder="Describe your mission requirements, technical specs, or required timeline..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+            </button>
+          </form>
+
+          <div class="contact-direct-info">
+            <div class="direct-box">
+              <i class="fa-solid fa-envelope text-cyan"></i>
+              <div>
+                <span>Official Email</span>
+                <strong>guptashivambdn@gmail.com</strong>
+              </div>
+            </div>
+
+            <div class="direct-box">
+              <i class="fa-solid fa-phone text-purple"></i>
+              <div>
+                <span>Phone / WhatsApp</span>
+                <strong>+91 9353671254</strong>
+              </div>
+            </div>
+
+            <div class="direct-box">
+              <i class="fa-solid fa-location-dot text-green"></i>
+              <div>
+                <span>Headquarters & R&D</span>
+                <strong>Workflo Ranka Junction, Old Madras Road, KR Puram Hobli, Vijnanapura, Bengaluru Urban,
+                  Bengaluru, Karnataka, India - 560016</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <img src="assets/images/nestx_logo.png" alt="NestX Aerospace Logo" class="footer-logo-img">
+        </a>
+        <p>NestX Aerospace Pvt. Ltd. is an indigenous drone technology company headquartered in Bengaluru, Karnataka.
+          Delivering full-stack micro UAV platforms, high-reliability Electronics.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Product</a></li>
+          <li><a href="#daas">Drone-as-a-Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Subscribe for UAV Technical Updates</h4>
+        <p>Receive technical pinout schematics, product announcements, and whitepapers.</p>
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" placeholder="Enter your business email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 NestX Aerospace Pvt. Ltd. All rights reserved. | info@nestx.co.in | +91 9353671254</p>
+    </div>
+  </footer>
+
+  <!-- Quick View Specs Modal -->
+  <div class="modal-overlay" id="product-modal-overlay">
+    <div class="modal-card" id="product-modal">
+      <button class="modal-close" id="close-product-modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modal-product-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="app.js?v=20260808_v17"></script>
+</body>
+
+</html>
