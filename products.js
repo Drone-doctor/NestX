@@ -7,13 +7,14 @@ const categoryInfo = {
     products: [
       {
         id: 'signature-1',
+        pdfFile: 'assets/datasheets/Signature-I-specifications.pdf',
         name: 'SIGNATURE-I',
         badge: 'MICRO UAV PLATFORM',
         desc: 'Indigenous micro-category UAV engineered for high-precision surveillance, industrial infrastructure inspection, defense perimeter monitoring, and surveying.',
         image: 'assets/images/signature_1_drone.png',
         specs: [
           { label: 'Weight Class', val: 'Under 1 kg (Micro Category)' },
-          { label: 'Flight Endurance', val: 'Up to 30 Minutes' },
+          { label: 'Flight Endurance', val: 'Up to 45 Minutes' },
           { label: 'Transmission Range', val: '10 km HD Encrypted Link' },
           { label: 'Camera & Optics', val: '1/1.7" Sony 4K Sensor (3-Axis Gimbal)' },
           { label: 'Max Speed', val: '36 km/h (10 m/s Wind Resistance)' },
@@ -28,6 +29,7 @@ const categoryInfo = {
     products: [
       {
         id: 'command-1',
+        pdfFile: 'assets/datasheets/NX02-01-DST.pdf',
         name: 'Command 1 Joystick',
         badge: 'HALL-EFFECT SPLIT-PCB CONTROLLER',
         desc: 'Dual-mode UAV ground control system featuring 12-bit contactless Hall-effect joysticks and split-PCB architecture (LHS/RHS). Operates as a plug-and-play USB HID Gamepad (for Mission Planner / QGC) or in RC/SBUS Mode over UART.',
@@ -45,6 +47,7 @@ const categoryInfo = {
       },
       {
         id: 'pocket-pro',
+        pdfFile: 'assets/datasheets/NX02-01-DST.pdf',
         name: 'Handheld Ground Controller',
         badge: '15KM MINI HANDHELD GROUND STATION',
         desc: '15-kilometer-range mini handheld ground station with integrated 5.5-inch 1000-nit touchscreen, Qualcomm 8-core CPU, Android 9.0 OS, dual HD low-latency video transmission, and 9-hour battery life.',
@@ -68,6 +71,7 @@ const categoryInfo = {
     products: [
       {
         id: 'gnss-denied-1',
+        pdfFile: 'assets/datasheets/NX03-01-DST.pdf',
         name: 'NX-VIOS GNSS-Denied System',
         badge: 'NON-GPS AUTONOMOUS POSITIONING',
         desc: 'Autonomous visual-inertial odometry (VIO) and 3D LiDAR navigation payload enabling precision hovering and position hold in GPS/GNSS-denied environments, urban canyons, underground tunnels, and electronic warfare jammer zones.',
@@ -83,6 +87,7 @@ const categoryInfo = {
       },
       {
         id: 'joule-1',
+        pdfFile: 'assets/datasheets/NX01-01-DST.pdf',
         name: 'NX-Joule 1 Buck Converter',
         badge: '2S-6S WIDE-INPUT BUCK MODULE',
         desc: 'Compact, high-efficiency synchronous buck converter module designed for unmanned aerial, satellite, and embedded aerospace systems. Accepts 7V-25V (2S-6S LiPo) input and delivers regulated 5.0V or 3.3V output up to 2.5A.',
@@ -100,6 +105,7 @@ const categoryInfo = {
       },
       {
         id: 'atlas-1',
+        pdfFile: 'assets/datasheets/NX03-01-DST.pdf',
         name: 'NX-Atlas 1 GNSS + Compass',
         badge: 'DUAL-BAND GNSS + RM3100',
         desc: 'CAN-based multi-constellation GNSS & 3-axis magnetometer module powered by u-blox NEO-F10N (L1/L5) and PNI RM3100. Supports NavIC, GPS, GLONASS, Galileo, and BeiDou with DroneCAN / UAVCAN v1 compatibility.',
@@ -161,7 +167,7 @@ function setCategory(cat) {
             <a href="datasheet.html?id=${prod.id}" target="_blank" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
               <i class="fa-solid fa-eye"></i> View Datasheet
             </a>
-            <a href="datasheet.html?id=${prod.id}&download=true" target="_blank" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; font-weight: 700;">
+            <a href="${prod.pdfFile || 'datasheet.html?id=' + prod.id + '&download=true'}" download target="_blank" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; font-weight: 700;">
               <i class="fa-solid fa-file-pdf"></i> Download PDF Datasheet
             </a>
           </div>

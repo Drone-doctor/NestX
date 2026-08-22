@@ -3,6 +3,8 @@
 const DATASHEETS = {
   'gnss-denied-1': {
     code: 'NX03-03',
+    pdfFile: 'assets/datasheets/NX03-01-DST.pdf',
+    pdfName: 'NX-VIOS_Datasheet.pdf',
     title: 'NX-VIOS GNSS-Denied System',
     subtitle: 'Visual-Inertial Odometry System (VIO + 3D LiDAR Non-GPS Autonomous Positioning)',
     highlights: 'VIO + 3D LiDAR | < 0.5% Sub-Meter Position Hold | 360° Obstacle Avoidance | DroneCAN / ROS2 | Made in India',
@@ -93,6 +95,8 @@ const DATASHEETS = {
 
   'atlas-1': {
     code: 'NX03-01',
+    pdfFile: 'assets/datasheets/NX03-01-DST.pdf',
+    pdfName: 'NX-Atlas_1_Datasheet.pdf',
     title: 'NX-Atlas 1',
     subtitle: 'CAN-Based Multi-Constellation GNSS + Magnetometer Module',
     highlights: 'u-blox NEO-F10N | RM3100 | NAVIC + GPS + GLONASS + Galileo + BeiDou | Dual CAN JST-GH | Made in India',
@@ -184,6 +188,70 @@ const DATASHEETS = {
         ]
       },
       {
+        heading: 'GNSS Specifications (u-blox NEO-F10N)',
+        type: 'table',
+        headers: ['Parameter', 'Specification'],
+        rows: [
+          ['GNSS Constellations', 'GPS, GLONASS, Galileo, BeiDou, NavIC (IRNSS)'],
+          ['Frequency Bands', 'L1: 1575.42 MHz | L5: 1176.45 MHz | NavIC L5: 1176.45 MHz'],
+          ['Channels', '32 tracking / 32 acquisition'],
+          ['Position Accuracy (CEP)', '1.5 m CEP (L1 + L5, open sky)'],
+          ['Velocity Accuracy', '0.05 m/s'],
+          ['Cold Start TTFF', '< 26 s (typical)'],
+          ['Hot Start TTFF', '< 2 s (typical)'],
+          ['Update Rate', 'Up to 25 Hz'],
+          ['Sensitivity (Tracking)', '−167 dBm'],
+          ['Sensitivity (Acquisition)', '−148 dBm'],
+          ['PPS Output', '1 PPS, accuracy < 30 ns RMS (3D fix)'],
+          ['Anti-Jamming & Anti-Spoofing', 'Detection and reporting']
+        ]
+      },
+      {
+        heading: 'Magnetometer Specifications (PNI RM3100)',
+        type: 'table',
+        headers: ['Parameter', 'Specification'],
+        rows: [
+          ['Sensor Type', 'Magneto-Inductive (MI) technology'],
+          ['Measurement Range', '±1100 µT'],
+          ['Resolution', '13 nT (@ 200 CPS)'],
+          ['Noise Density', '0.4 nT/√Hz'],
+          ['Interface', 'SPI (to MCU)'],
+          ['Axes', '3-axis (X, Y, Z)']
+        ]
+      },
+      {
+        heading: 'CAN Bus Interface',
+        type: 'table',
+        headers: ['Parameter', 'Specification'],
+        rows: [
+          ['Protocol', 'CAN 2.0B'],
+          ['Bit Rate (CAN 2.0B)', 'Up to 1 Mbit/s'],
+          ['CAN Transceiver', 'Integrated, ISO 11898-2 compliant'],
+          ['Protocol (Application)', 'DroneCAN / UAVCAN v0 compatible']
+        ]
+      },
+      {
+        heading: 'LED Indicators',
+        type: 'table',
+        headers: ['Designator', 'Color', 'Behavior & Meaning'],
+        rows: [
+          ['LED1 (PPS)', 'Green', 'Blinking (1 Hz) — 3D GNSS fix acquired. Solid — no fix.'],
+          ['LED2 (MCU-LED)', 'Blue', 'Blinking (1 Hz) — MCU running normally. Solid ON / OFF — fault condition.']
+        ]
+      },
+      {
+        heading: 'Mechanical Dimensions',
+        type: 'table',
+        headers: ['Parameter', 'Specification'],
+        rows: [
+          ['PCB Dimensions', '48.0 mm × 48.0 mm'],
+          ['PCB Thickness', '1.6 mm (standard FR4)'],
+          ['Mounting', 'M2 corner holes'],
+          ['Weight', '~15 g (without cable harness)'],
+          ['Origin', 'Made in India']
+        ]
+      },
+      {
         heading: 'Connector Pinout — JST-GH 1.25 mm, 4-Pin (×2)',
         type: 'pinout',
         headers: ['Pin', 'Signal', 'Direction', 'Description'],
@@ -193,12 +261,22 @@ const DATASHEETS = {
           ['3', 'CANL', 'Bidirectional', 'CAN bus low-side differential signal'],
           ['4', 'GND', 'Power', 'Ground reference']
         ]
+      },
+      {
+        heading: 'Ordering Information',
+        type: 'table',
+        headers: ['Part Number', 'Description', 'Notes'],
+        rows: [
+          ['NX03-001', 'GPS-F10 Module', 'Custom boards and bulk pricing available on request.']
+        ]
       }
     ]
   },
 
   'command-1': {
     code: 'NX02-01',
+    pdfFile: 'assets/datasheets/NX02-01-DST.pdf',
+    pdfName: 'NX-Command_1_Datasheet.pdf',
     title: 'NX-Command 1',
     subtitle: 'Dual-Mode UAV Controller',
     highlights: 'Hall Effect Joystick • Split-PCB Design • SBUS / USB HID Dual Mode | Made in India',
@@ -617,6 +695,8 @@ const DATASHEETS = {
 
   'joule-1': {
     code: 'NX01-01',
+    pdfFile: 'assets/datasheets/NX01-01-DST.pdf',
+    pdfName: 'NX-Joule_1_Datasheet.pdf',
     title: 'NX-Joule 1',
     subtitle: '2S – 6S Wide-Input Buck Converter Module',
     highlights: 'Regulated 5V / 3.3V Output | Up to 2.5A | EN55011 Class B EMI | Made in India',
@@ -1200,9 +1280,9 @@ function renderDatasheetPage() {
           <img src="assets/images/nestx_logo.png" alt="NestX Logo" class="ds-logo" />
         </div>
         <div style="display: flex; align-items: center; gap: 16px;">
-          <button onclick="window.print()" class="btn btn-primary btn-sm no-print" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; border: none; border-radius: 8px; padding: 8px 18px; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 243, 255, 0.35);">
+          <a href="${data.pdfFile || '#'}" download="${data.pdfName || 'Datasheet.pdf'}" target="_blank" class="btn btn-primary btn-sm no-print" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; text-decoration: none; border: none; border-radius: 8px; padding: 8px 18px; cursor: pointer; box-shadow: 0 4px 15px rgba(0, 243, 255, 0.35);">
             <i class="fa-solid fa-file-pdf"></i> Download PDF Datasheet
-          </button>
+          </a>
           <div class="ds-header-code">${data.code} | DATASHEET</div>
         </div>
       </header>
@@ -1270,18 +1350,21 @@ function renderDatasheetPage() {
 
       <!-- Bottom Actions Bar (Download PDF) -->
       <div class="ds-actions no-print" style="margin-top: 2rem; text-align: center;">
-        <button onclick="window.print()" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 10px; font-weight: 700; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; border: none; border-radius: 8px; padding: 12px 28px; cursor: pointer; box-shadow: 0 6px 20px rgba(0, 243, 255, 0.4);">
+        <a href="${data.pdfFile || '#'}" download="${data.pdfName || 'Datasheet.pdf'}" target="_blank" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 10px; font-weight: 700; background: linear-gradient(135deg, #00f3ff, #0066ff); color: #080c14; text-decoration: none; border: none; border-radius: 8px; padding: 12px 28px; cursor: pointer; box-shadow: 0 6px 20px rgba(0, 243, 255, 0.4);">
           <i class="fa-solid fa-file-pdf"></i> Download Standard PDF Datasheet
-        </button>
+        </a>
       </div>
 
     </div>
   `;
 
-  if (window.location.search.includes('download=true')) {
-    setTimeout(() => {
-      window.print();
-    }, 600);
+  if (window.location.search.includes('download=true') && data.pdfFile) {
+    const a = document.createElement('a');
+    a.href = data.pdfFile;
+    a.download = data.pdfName || 'Datasheet.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   }
 }
 
